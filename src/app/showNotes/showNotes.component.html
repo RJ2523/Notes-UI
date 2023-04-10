@@ -1,0 +1,20 @@
+<div class="main-container">
+    <div class ='notes' *ngIf = 'true'>
+    <div *ngFor='let note of notes' class="box-container">
+            <div class="container">
+                <div class="heading">
+                    <h4>{{note.heading}}</h4>
+                </div>
+                <div class="note">
+                    <p>{{note.note}}</p>
+                </div>
+                <div class="notes-btn-cnt">
+                    <button  [routerLink]="['/note',note.id]" class="edit btn btn-primary">Edit</button>
+                </div>
+            </div>
+    </div>
+</div>
+    <div class="new-btn-cnt">
+        <button style="color:white;" routerLink="/new" class="add btn btn-light"><span class="bi bi-plus"></span></button>
+    </div> 
+</div>

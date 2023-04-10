@@ -1,0 +1,23 @@
+.newNote{
+    margin:10px;
+    padding: 20px;
+}
+
+.cancel-btn{
+    background-color: #eeb249;
+    border: #eeb249 solid 2px;
+}
+.cancel-btn:focus{
+    background-color:#ebc48a;
+    border: #ebc48a solid 2px;
+}
+
+.save-btn{
+    background-color: #eeb249;
+    border: #eeb249 solid 2px;
+}
+
+.save-btn:focus{
+    background-color:#ebc48a;
+    border: #ebc48a solid 2px;
+}

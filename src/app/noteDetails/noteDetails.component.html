@@ -1,0 +1,11 @@
+<div class = 'newNote'>
+    <br>
+<input class="form-control" (focusout)='getHeader($event)' [ngModel]="note.heading" type="text" placeholder="Heading">
+<br>
+<textarea class="form-control" (focusout)='getNote($event)' [ngModel]="note.note" name="" id="" cols="30" rows="10" placeholder="Type something.." required></textarea>
+<br>
+<button class="save-btn btn btn-primary" (click)='saveNote()'>Save</button>
+&nbsp;
+<Button class="cancel-btn btn btn-primary" (click)="goBackToMainView()">Cancel</Button>
+</div>
+
