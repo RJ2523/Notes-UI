@@ -67,11 +67,13 @@ export class NotesService implements OnInit{
         return note[0];
     }
     addNotes(note:Notes):void{
+        note.id = this.notes.length+1;
+        note.date = new Date();
         this.notes.push(note);
     }
 
     updateRecord(note: Notes):void{
-        this.notes[note.id-1].heading =  note.heading;
-        this.notes[note.id-1].note = note.note;
+        this.notes[note.id!-1].heading =  note.heading;
+        this.notes[note.id!-1].note = note.note;
     }
 }

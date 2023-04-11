@@ -20,9 +20,16 @@ export class NoteDetailsComponent implements OnInit{
     noteValue!: string;
     ngOnInit(): void {
         console.log('>> OnIt: NoteDetailsComponent');
-        let id = Number(this.activatedRoute.snapshot.paramMap.get('id'));
-        this.note = this.notesService.getNoteById(id);
-        console.log(this.note);
+        this.note = {
+            id: undefined,
+            heading: '',
+            note: '',
+            date: undefined
+        };
+        if(this.activatedRoute.snapshot.paramMap.get('id')) {
+            this.note = this.notesService.getNoteById(Number(this.activatedRoute.snapshot.paramMap.get('id')));
+        }
+        console.log(`note: ${JSON.stringify(this.note)}`);
         this.heading = this.note.heading;
         this.noteValue = this.note.note;
     }
@@ -43,7 +50,11 @@ export class NoteDetailsComponent implements OnInit{
         console.log('>> saveNote()');
         this.note.heading = this.heading;
         this.note.note = this.noteValue;
-        this.notesService.updateRecord(this.note);
+        if(this.note.id) {
+            this.notesService.updateRecord(this.note);
+        } else {
+            this.notesService.addNotes(this.note);
+        }
         this.router.navigate(['/'])
     }
     goBackToMainView():void{

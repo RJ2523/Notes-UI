@@ -1,6 +1,6 @@
 export interface Notes{
-    id: number;
+    id: number | undefined;
     heading:string;
     note: string;
-    date: Date;
+    date: Date | undefined;
 }
