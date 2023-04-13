@@ -72,6 +72,18 @@
     background-color: #fff4e4;
     color: black;
     border: #fff4e4 solid 1px;
+    margin-right: 5px;
+  }
+
+  .delete{
+    background-color: #fff4e4;
+    color: black;
+    border: #fff4e4 solid 1px;
+  }
+
+  .delete:focus{
+      background-color: #eeb249;
+      border: #eeb249 solid 1px;
   }
 
   .edit:focus{

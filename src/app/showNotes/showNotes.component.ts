@@ -15,5 +15,8 @@ export class ShowNotesComponent implements OnInit{
         this.notes = this.notesService.getNotes();
         console.log(this.notes);
     }
+    onClick(event: Event) {
+        event.stopPropagation();
+      }
 
 }

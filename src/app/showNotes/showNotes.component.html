@@ -1,6 +1,7 @@
 <div class="main-container">
     <div class ='notes' *ngIf = 'true'>
     <div *ngFor='let note of notes' class="box-container">
+        <a class="view" style="text-decoration:none;color:black" href="">
             <div class="container">
                 <div class="heading">
                     <h4>{{note.heading}}</h4>
@@ -9,9 +10,11 @@
                     <p>{{note.note}}</p>
                 </div>
                 <div class="notes-btn-cnt">
-                    <button  [routerLink]="['/note',note.id]" class="edit btn btn-primary">Edit</button>
+                    <button [routerLink]="['/note',note.id]" (click)="onClick($event)" class="edit btn btn-primary"><i class="bi bi-pencil"></i></button>
+                    <button class="delete btn btn-primary" (click)="onClick($event); $event.stopPropagation()"><i class="bi bi-trash"></i></button>
                 </div>
             </div>
+        </a>
     </div>
 </div>
     <div class="new-btn-cnt">
