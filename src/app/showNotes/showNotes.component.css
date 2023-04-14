@@ -81,12 +81,12 @@
     border: #fff4e4 solid 1px;
   }
 
-  .delete:focus{
+  .delete:active{
       background-color: #eeb249;
       border: #eeb249 solid 1px;
   }
 
-  .edit:focus{
+  .edit:active{
     background-color: #eeb249;
     border: #eeb249 solid 1px;
   }
