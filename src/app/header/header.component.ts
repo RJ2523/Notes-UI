@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
     selector:'notes-header',
@@ -6,6 +6,9 @@ import { Component } from "@angular/core";
     styleUrls:['header.component.css']
 })
 export class HeaderComponent{
+
+    @Input() name: string | undefined;
+
     title:string = 'Notes!!'
 
 }
