@@ -10,7 +10,7 @@ export class NotesService implements OnInit{
     }
     notes : Notes[] = [
         {
-            id: 1,
+            id: '1',
             heading: "note1",
             note: `Now is the winter of our discontent
             Made glorious summer by this sun of York;
@@ -21,7 +21,7 @@ export class NotesService implements OnInit{
             date: new Date
         },
         {
-            id: 2,
+            id: '2',
             heading: "note2",
             note: `Our stern alarums changed to merry meetings,
             Our dreadful marches to delightful measures.
@@ -35,7 +35,7 @@ export class NotesService implements OnInit{
             date: new Date
         },
         {
-            id: 3,
+            id: '3',
             heading: "note3",
             note:  `And Eurypylus, son of Euaemon, killed Hypsenor, the son of noble Dolopion,
              who had been made priest of the river Scamander, and was honoured among the people 
@@ -61,19 +61,19 @@ export class NotesService implements OnInit{
         return this.notes.length+1;
     }
 
-    getNoteById(id: number): Notes{
+    getNoteById(id: string): Notes{
         console.log('>> getNoteById');
         let note = this.notes.filter(item=>item.id==id);
         return note[0];
     }
     addNotes(note:Notes):void{
-        note.id = this.notes.length+1;
+        note.id = (this.notes.length+1).toString();
         note.date = new Date();
         this.notes.push(note);
     }
 
     updateRecord(note: Notes):void{
-        this.notes[note.id!-1].heading =  note.heading;
-        this.notes[note.id!-1].note = note.note;
+        this.notes[Number(note.id)!-1].heading =  note.heading;
+        this.notes[Number(note.id)!-1].note = note.note;
     }
 }

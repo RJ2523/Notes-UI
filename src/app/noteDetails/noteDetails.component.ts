@@ -27,7 +27,7 @@ export class NoteDetailsComponent implements OnInit{
             date: undefined
         };
         if(this.activatedRoute.snapshot.paramMap.get('id')) {
-            this.note = this.notesService.getNoteById(Number(this.activatedRoute.snapshot.paramMap.get('id')));
+            this.note = this.notesService.getNoteById(this.activatedRoute.snapshot.paramMap.get('id')!);
         }
         console.log(`note: ${JSON.stringify(this.note)}`);
         this.heading = this.note.heading;
