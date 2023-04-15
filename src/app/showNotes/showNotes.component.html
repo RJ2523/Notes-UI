@@ -9,7 +9,7 @@
                     <p>{{note.note}}</p>
                 </div>
                 <div class="notes-btn-cnt">
-                    <button [routerLink]="['/note',note.id]" (click)="$event.stopPropagation()" class="edit btn btn-primary"><i class="bi bi-pencil"></i></button>
+                    <button [routerLink]="['/edit',note.id]" (click)="$event.stopPropagation()" class="edit btn btn-primary"><i class="bi bi-pencil"></i></button>
                     <button class="delete btn btn-primary" (click)="$event.stopPropagation()"><i class="bi bi-trash"></i></button>
                 </div>
             </div>

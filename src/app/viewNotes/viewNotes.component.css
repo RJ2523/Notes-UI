@@ -1,0 +1,76 @@
+.notes-heading {
+    background-color: #f08e05;
+    font-size: x-small !important;
+    width: fit-content;
+    padding: 1.25rem;
+    margin: auto;
+    margin-top : 2rem;
+    border-radius: 1rem;
+}
+
+.notes-body {
+    margin: 2rem;
+    background-color: #f08e05;
+    color: #fff4e4;
+    padding: 2rem;
+    border: 4px solid green;
+    border-radius: 3rem;
+}
+
+.delete-btn {
+    background-color: red;
+    width: fit-content;
+    padding: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0 100rem 100rem 0;
+    transform: rotateY(65deg);
+    transform-origin: left;
+    color: transparent;
+}
+
+.delete-btn:hover {
+    transform: none;
+    color: #fff4e4;
+}
+
+.edit-btn {
+    background-color: #eeb249;
+    width: fit-content;
+    padding: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100rem 0 0 100rem;
+    transform: rotateY(65deg);
+    transform-origin: right;
+    color: transparent;
+}
+
+.edit-btn:hover {
+    transform: none;
+    color: #fff4e4;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bi {
+    position: relative;
+    top: -5px;
+}
+
+.back-btn-cnt {
+    background-color: #f08e05;
+    width: fit-content;
+    padding: 1.5rem;
+    margin: 1.5rem;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100rem;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+}

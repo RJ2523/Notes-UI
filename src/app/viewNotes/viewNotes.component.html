@@ -1,0 +1,22 @@
+<div class="notes-heading">
+    <notes-header [name]="notes.heading"></notes-header>
+</div>
+
+<div class="notes-body">
+    {{notes.note}}
+</div>
+
+<div class="row">
+
+    <div class="delete-btn">
+        <i class="bi bi-trash"></i>
+    </div>
+
+    <div class="edit-btn" [routerLink]="['/edit', notes.id]">
+        <i class="bi bi-pencil"></i>
+    </div>
+</div>
+
+<div class="back-btn-cnt" (click)="goBack();">
+    <i class="bi bi-arrow-left"></i>
+</div>

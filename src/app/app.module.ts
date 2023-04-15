@@ -6,10 +6,11 @@ import { FormsModule } from '@angular/forms';
 import { ShowNotesComponent } from './showNotes/showNotes.component';
 import { NoteDetailsComponent } from './noteDetails/noteDetails.component';
 import { HeaderComponent } from './header/header.component';
+import { ViewNotesComponent } from './viewNotes/viewNotes.component';
 
 @NgModule({
   declarations: [
-    AppComponent, ShowNotesComponent, NoteDetailsComponent, HeaderComponent
+    AppComponent, ShowNotesComponent, NoteDetailsComponent, HeaderComponent, ViewNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +19,8 @@ import { HeaderComponent } from './header/header.component';
       {path:'note', component:NoteDetailsComponent},
       {path: '', redirectTo:'homepage', pathMatch:'full'},
       {path: 'homepage', component: ShowNotesComponent},
-      {path:'note/:id', component:NoteDetailsComponent}
+      {path:'edit/:id', component:NoteDetailsComponent},
+      {path: 'note/:id', component: ViewNotesComponent}
     ],{enableTracing:true})
   ],
   providers: [],
